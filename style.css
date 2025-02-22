@@ -1,0 +1,190 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+    gap: 4px;
+    text-align: center;
+  }
+
+  .container div {
+    padding: 15px;
+    font-family: Helvetica, sans-serif;
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+  }
+
+  .header{
+    background-color: #393F4D;
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+  }
+
+  .logo{
+    justify-self: start;
+  }
+
+  .menu{
+    align-self: center;
+  }
+
+  .menu ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .menu ul,
+  .menu li {
+    list-style: none;
+    
+  }
+  .menu li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+  }
+
+  .sidebar{
+    background-color: #C50208;
+    grid-row: 2 / 4;
+    display: grid;
+    gap: 50px;
+  }
+
+  .sidebar .sidebar-img{
+    background-color: white;
+    color: #000;
+    font-size: 12px;
+    font-weight: normal;
+    border-radius: 10px;
+  }
+
+  .sidebar .sidebar-content{
+    background-color: white;
+    color: #000;
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  .sidebar-content,
+.sidebar-img {
+  display: grid;
+  align-items: center;
+}
+
+  .nav{
+    background-color: #C50208;
+  }
+
+  .nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .nav ul,
+  .nav li {
+    list-style: none;
+    /* justify-self: center; */
+    /* align-self: center; */
+  }
+  .nav li a {
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  .article{
+    background-color: #BCCBDE;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  /* .article p{
+    font-size: 18px;
+    
+    color: white;
+    text-align: left;
+  } */
+
+  .article .card {
+    background-color: #fff;
+    color: #000;
+    font-family: sans-serif;
+    height: 200px;
+  }
+  .card p {
+    color: black;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: left;
+    padding: 5px;
+
+  }
+  
+  .card .title {
+    text-align: center;
+    font-size: 18px;
+  }
+
+
+  .footer{
+    background-color: #393F4D;
+    grid-column: 1 /3;
+  }
+
+  .footer p{
+    font-size: 13px;
+  font-weight: normal;
+  }
